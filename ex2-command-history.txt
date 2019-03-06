@@ -1,0 +1,326 @@
+    1  mkdir cit173_lab4
+    2  man dev
+    3  list /dev
+    4  ls /dev
+    5  ls /dev > ~/cit173_lab4/'my-dev-nodes.txt'
+    6  ls cit173_lab4
+    7  cat ~/cit173_lab4/my-dev-nodes.txt | /dev/full
+    8  cat ~/cit173_lab4/my-dev-nodes.txt > /dev/full
+    9  help
+   10  head help
+   11  help head
+   12  man -k head
+   13  cat ~/cit173_lab4/my-dev-nodes.txt | /dev/full
+   14  cat ~/cit173_lab4/my-dev-nodes.txt > /dev/full
+   15  man head
+   16  man -k head
+   17  man head
+   18  head -c --bytes=1024 /dev/random
+   19  head --bytes=1024 /dev/random
+   20  head --bytes=1024 /dev/random > ~/cit173_lab4/my-random-data.txt
+   21  kernal
+   22  nfas
+   23  nfs
+   24  cat ~/cit173_lab4/my-random-data.txt 
+   25  ls kmod
+   26  lsmod
+   27  lsmod > ~/cit173_lab4/my-modules-1.txt
+   28  modinfo nfs
+   29  modinfo nfs > ~/cit173_lab4/my-nfs-info.txt
+   30  modprobe nfs
+   31  sudo modprobe nfs
+   32  lsmod
+   33  lsmod > ~/cit173_lab4/my-modules-2.txt
+   34  rmmod nfs
+   35  sudo rmmod nfs
+   36  lsmod > ~/cit173_lab4/my-modules-3.txt
+   37  man gdisk
+   38  gdisk n
+   39  gdisk
+   40  sudo fdisk -l
+   41  sudo gdisk
+   42  /dev
+   43  ls /dev
+   44  ls /dev > ~/cit173_lab4/my-dev-nodes.txt
+   45  ls /cit173_lab4
+   46  ls cit173_lab4
+   47  mkfs sdb1
+   48  mkfs sdb1.ext4
+   49  sudo mkfs sdb1
+   50  sudo mkfs -t ext4 /dev/sdb1
+   51  sudo mkfs -t ext4 /dev/sdb2
+   52  /mnt /dev/sdb1
+   53  mount /dev/sdb1 /mnt/path
+   54  sudo mount /dev/sdb1 /mnt/path
+   55  sudo mkdir /mnt/data
+   56  sudo mkdir /mnt/backup
+   57  mount /dev/sdb1 /mnt/data
+   58  sudo mount /dev/sdb1 /mnt/data
+   59  sudo mount /dev/sdb2 /mnt/backup
+   60  ls /mnt
+   61  mount -l
+   62  mount -l > ~/cit173_lab4/my-mounts.txt
+   63  df -l
+   64  df -l > ~/cit173_lab4/my-disk-usage.txt
+   65  sudo umount /dev/sdb2 /mnt/backup
+   66  sudo umount /dev/sdb1 /mnt/data
+   67  mount -l
+   68  sudo dd if=/dev/sdb of=~/cit173_lab4/gpt.bin bs=512 count=34
+   69  cd ~/cit173_lab4/
+   70  git config
+   71  git config --global.user"butler818"
+   72  git init
+   73  git add remote origin https://github.com/butler818/cit173_lab4.git
+   74  git remote add origin https://github.com/butler818/cit173_lab4.git
+   75  git add --all
+   76  git commit -m "lab assignment 4"
+   77  git push origin master
+   78  mkdir cit173_lab5
+   79  cat /etc/fstab
+   80  man fstab
+   81  sudo gedit /etc/fstab
+   82  sudo -e gedit /etc/fstab
+   83  ls mount
+   84  mount
+   85  cp /etc/fstab ~/cit173_lab5/my-fstab.txt
+   86  ls cit173_lab5
+   87  ls ~/cit173_lab5/my-fstab.txt 
+   88  cp /etc/fstab > ~/cit173_lab5/my-fstab.txt
+   89  man --help
+   90  man ls --help
+   91  mount
+   92  man ls --help
+   93  man ls cp
+   94  cp -a /etc/fstab > ~/cit173_lab5/my-fstab.txt
+   95  cp --help
+   96  man ls mv
+   97  cat /etc/fstab > ~/cit173_lab5/my-fstab.txt 
+   98  ls ~/cit173_lab5/my-fstab.txt 
+   99  cat ~/cit173_lab5/my-fstab.txt 
+  100  man dd
+  101  dd obs=1024  /mnt/data | /dev/random
+  102  dd --help
+  103  man ls dd
+  104  dd obs=1024  /mnt/data | /dev/random
+  105  dd obs=1024 /dev/random > /mnt/data/data_file1.dat
+  106  sudo dd obs=1024 /dev/random > /mnt/data/data_file1.dat
+  107  cat /etc/fstab 
+  108  mount
+  109  sudo dd obs=1024 /dev/random > /mnt/data/data_file1.dat
+  110  clear
+  111  sudo dd bs=1024 /dev/random > /mnt/data/data_file1.dat
+  112  dd --help
+  113  clear
+  114  dd if=/mnt/data of=data_file1.dat bs=1024 count=1 | /dev/random
+  115  sudo dd if=/mnt/data of=data_file1.dat bs=1024 count=1 | /dev/random
+  116  sudo dd if=/mnt/data of=data_file1.dat bs=1024 count=1 /dev/random
+  117  sudo dd /dev/random  if=/mnt/data of=data_file1.dat bs=1024 count=1
+  118  sudo dd if=/mnt/data of=data_file1.dat bs=1024 count=1
+  119  /dev/random | dd if=/mnt/data of=data_file1.dat bs=1024 count =1
+  120  sudo /dev/random | dd if=/mnt/data of=data_file1.dat bs=1024 count=1
+  121  sudo dd if=/dev/random  of=/mnt/data/data_file1.dat bs=1024 count=1
+  122  sudo dd if=/dev/random  of=/mnt/data/data_file1.dat obs=1024 count=1
+  123  sudo dd if=/dev/random  of=/mnt/data/data_file2.dat obs=1024 count=1
+  124  ls -l /dev/random
+  125  sudo dd if=/dev/random  of=/mnt/data/data_file2.dat obs=1024 count=1 block=1
+  126  sudo dd if=/dev/random  of=/mnt/data/data_file2.dat block=1 count=1024
+  127  sudo dd if=/dev/random  of=/mnt/data/data_file2.dat obs=1 count=1024
+  128  man dd
+  129  sudo dd if=/dev/random  of=/mnt/data/data_file2.dat bs=1 count=1024
+  130  sudo dd if=/dev/random  of=/mnt/data/data_file1.dat bs=1 count=1024
+  131  cat ~/mnt/data/data_file1.dat
+  132  cat /mnt/data/data_file1.dat 
+  133  sudo dd if=/dev/random  of=/mnt/backup/backup_file1.dat bs=1 count=1024
+  134  sudo dd if=/dev/random  of=/mnt/backup/backup_file2.dat bs=1 count=1024
+  135  cp /mnt/data/data_file1.dat ~/cit173_lab5
+  136  cp /mnt/data/data_file2.dat ~/cit173_lab5
+  137  cp /mnt/backup/backup_file2.dat ~/cit173_lab5
+  138  cp /mnt/backup/backup_file1.dat ~/cit173_lab5
+  139  ls ~/cit173_lab5
+  140  man df
+  141  df
+  142  df > ~/cit173_lab5/my-disk-usage.txt
+  143  /proc/version
+  144  sudo /proc/version
+  145  procfs /proc/version
+  146  procfs
+  147  clear
+  148  sudo cat /proc/version
+  149  sudo cat /proc/cpu
+  150  sudo cat /proc/cpuinfo
+  151  sudo cat /proc/meminfo
+  152  sudo cat /proc/modules
+  153  sudo cat /proc/bash
+  154  /proc
+  155  cat/proc
+  156  cat /proc
+  157  ls /proc
+  158  ls ps
+  159  ps
+  160  sudo cat /proc/2167
+  161  top
+  162  cat /proc
+  163  ls /proc
+  164  sudo cat /proc/2167/smaps
+  165  sudo cat /proc/2167/mdstat
+  166  sudo cat /proc/2167/stat
+  167  sudo cat /proc/2167/status
+  168  sudo cat /proc/cpuinfo
+  169  sudo cat /proc/status
+  170  sudo cat /proc/stat
+  171  ls /proc
+  172  sudo cat /proc/uptime
+  173  sudo cat /proc/vmstat
+  174  cat -l /proc/vmstat
+  175  man cat
+  176  ls -l /proc/vmstat
+  177  sudo ls -l /proc/vmstat
+  178  cat -a /proc/vmstat
+  179  cat -A /proc/vmstat
+  180  ls /proc
+  181  sudo cat /proc/loadavg
+  182  top
+  183  sudo cat /proc/706/status
+  184  sudo cat /proc/uptime
+  185  ls /proc
+  186  sudo cat /proc/cmdline
+  187  sudo cat /proc/fb
+  188  touch ~/cit173_lab5/my-procfs.txt
+  189  gedit ~/cit173_lab5/my-procfs.txt 
+  190  cat ~/cit173_lab5/my-procfs.txt 
+  191  touch ~/cit173_lab5/turn-on-capslock-led.txt
+  192  ls sysfs
+  193  ls /sys/class/leds
+  194  ls /sys/class/leds/input1::capslock
+  195  ls /sys/class/leds/input1::capslock/brightness
+  196  cat /sys/class/leds/input1::capslock/brightness
+  197  sudo tee '/sys/class/leds/input1::capslock/brightness/' 1
+  198  sudo tee '/sys/class/leds/input1/:/:capslock/brightness/' 1
+  199  echo 1 | sudo tee '/sys/class/leds/input1/:/:capslock/brightness/' 1
+  200  echo 1 | sudo tee '/sys/class/leds/input1::capslock/brightness/' 1
+  201  man tee
+  202  echo 1 | sudo tee 1 '/sys/class/leds/input1::capslock/brightness/'
+  203  echo 1 | sudo tee 1 '/sys/class/leds/input1::capslock/brightness'
+  204  echo 1 | sudo tee 0 '/sys/class/leds/input1::capslock/brightness'
+  205  echo 1 | sudo tee 0 '/sys/class/leds/input1::capslock/brightness' 0
+  206  echo 0 | sudo tee 0 '/sys/class/leds/input1::capslock/brightness' 
+  207  gedit ~/cit173_lab5/turn-on-capslock-led.txt 
+  208  history > ~/cit173_lab5/my-command-history.txt
+  209  cd ~/cit173_lab5
+  210  git init
+  211  git remote add origin https://github.com/butler818/cit173_lab5.git
+  212  git add --all
+  213  git commit -m "lab 5"
+  214  git push origin master
+  215  mkdir cit173_lab6
+  216  sudo groupadd Actors
+  217  sudo groupadd Directors
+  218  sudo groupadd Producers
+  219  man useradd
+  220  sudo useradd mhamill
+  221  sudo useradd hford
+  222  sudo useradd cfisher
+  223  sudo useradd glucas
+  224  sudo useradd gkurtz
+  225  man usermod
+  226  sudo usermod -p mhamill
+  227  sudo usermod -p mhamill luke
+  228  sudo usermod -p luke mhamill
+  229  sudo usermod -p solo hford
+  230  sudo usermod -p princess cfisher
+  231  sudo usermod -p ilm glucas
+  232  sudo usermod -p oz gkurtz
+  233  man usermod
+  234  sudo usermod -a -g mhamill Actors
+  235  sudo usermod -a -g Actors mhamill
+  236  sudo usermod -a -G Actors mhamill
+  237  sudo usermod -a -G Actors hford
+  238  sudo usermod -a -G Actors cfisher
+  239  sudo usermod -a -G Producers glucas
+  240  sudo usermod -a -G Producers gkurtz
+  241  sudo usermod -a -G Directors glucas
+  242  sudo usermod -a -l Mark_Hamill mhamill
+  243  sudo usermod -a -l Mark Hamill mhamill
+  244  man chomd
+  245  man chmod
+  246  man usermod
+  247  sudo usermod -l Mark Hamill mhamill
+  248  sudo usermod -c "Mark Hamill" mhamill
+  249  sudo usermod -c "Harrison Ford" hford
+  250  sudo usermod -c "Carrie Fisher" cfisher
+  251  sudo usermod -c "George Lucas" glucas
+  252  sudo usermod -c "Gary "kurtz" gkurtz
+  253  sudo usermod -c "Gary Kurtz" gkurtz
+  254  man cp
+  255  sudo cp /etc/passwd > ~/cit173_lab6
+  256  sudo cp /etc/passwd ~/cit173_lab6
+  257  sudo cp /etc/groups ~/cit173_lab6
+  258  ls /etc/
+  259  sudo cp /etc/group ~/cit173_lab6
+  260  history > ~/cit173_lab6/ex1-command-history
+  261  wget https://github.com/RenoTechnologyAcademy/CIT_Lab6_Files/archive/master.tar.gz
+  262  wget 
+  263  wget https://github.com/RenoTechnologyAcademy/CIT173_Lab6_Files/archive/master.tar.gz 
+  264  ping www.google.com
+  265  ping google.com
+  266  init 0
+  267  wget 
+  268  wget https://github.com/RenoTechnologyAcademy/CIT173_Lab6_Files/archive/master.tar.gz 
+  269  man tar
+  270  tar --extract
+  271  man tar
+  272  tar --extract -f tarball
+  273  ls
+  274  tar --extract -f master.tar.gz
+  275  ls master.tar.gz
+  276  ls
+  277  cd /CIT173_Lab6_Files-master
+  278  cd CIT173_Lab6_Files-master
+  279  cd ~
+  280  cd CIT173_Lab6_Files-master
+  281  sudo mkdir /var/StarWars
+  282  ls /var
+  283  sudo chmod a+rwx /var/StarWars
+  284  mkdir /var/StarWars/finance
+  285  mkdir /var/StarWars/directing
+  286  mkdir /var/StarWars/creative
+  287  man mv
+  288  mv /CIT173_Lab6_Files-master/star-wars-budget.txt /var/StarWars/finance
+  289  ls /CIT173_Lab6_Files-master
+  290  ls
+  291  cd ~
+  292  mv /CIT173_Lab6_Files-master/star-wars-budget.txt /var/StarWars/finance
+  293  ls
+  294  cd CIT173_Lab6_Files-master/
+  295  ls /
+  296  cd /
+  297  mv ~/CIT173_Lab6_Files-master/star-wars-budget.txt /var/StarWars/finance
+  298  mv ~/CIT173_Lab6_Files-master/star-wars-journal.txt /var/StarWars/directing
+  299  mv ~/CIT173_Lab6_Files-master/star-wars-script.txt /var/StarWars/creative
+  300  man chmod
+  301  chown glucas /var/StarWars/finance
+  302  sudo chown glucas /var/StarWars/finance
+  303  sudo chown gkurtz /var/StarWars/finance
+  304  sudo chown glucas /var/StarWars/directing
+  305  sudo chown glucas /var/StarWars/creative
+  306  sudo chmod o+rwx /var/StarWars/directing
+  307  sudo chmod g+rx /var/StarWars/directing
+  308  sudo chmod u+rwx /var/StarWars/directing
+  309  sudo chmod o-rwx /var/StarWars/directing
+  310  sudo chgrp directors /var/StarWars/directing
+  311  sudo chgrp Directors /var/StarWars/directing
+  312  sudo chgrp Actors /var/StarWars/creative
+  313  sudo chgrp Producers /var/StarWars/finance
+  314  sudo chmod g+rx /var/StarWars/directing
+  315  sudo chmod u+rwx /var/StarWars/directing
+  316  sudo chmod o-rwx /var/StarWars/directing
+  317  sudo chmod g+rwx /var/StarWars/directing
+  318  sudo chmod g+rx /var/StarWars/finance
+  319  sudo chmod g-w /var/StarWars/finance
+  320  sudo chmod u+rwx /var/StarWars/finance
+  321  sudo chmod o-rwx /var/StarWars/finance
+  322  sudo chmod o-rwx /var/StarWars/creative
+  323  sudo chmod u+rwx /var/StarWars/creative
+  324  sudo chmod g+rx /var/StarWars/creative
+  325  sudo chmod g-w /var/StarWars/creative
+  326  history > ~/cit173_lab6/ex2-command-history.txt
